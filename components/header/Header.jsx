@@ -1,7 +1,11 @@
-import React from "react";
+import ThemeButton from "../Theme/ThemeButton";
 
 const Header = () => {
-  return <header>Header</header>;
+  return (
+    <header>
+      <ThemeButton />
+    </header>
+  );
 };
 
 export default Header;

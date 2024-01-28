@@ -3,6 +3,8 @@ import "./styles/globals.css";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 
+import { ThemeProvider } from "@/components/Theme/ThemeProvider";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,11 +18,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <Header />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
