@@ -9,10 +9,10 @@ import {
   RiArrowDownSLine,
 } from "react-icons/ri";
 
-import DevImg from "./DevImg";
+import MyImg from "./MyImg";
 import Socials from "./Socials";
 
-const Hero = () => {
+const Introduction = () => {
   return (
     <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
           <div className="hidden xl:flex relative">
             <div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
-            <DevImg
+            <MyImg
               containerStyles="bg-hero_shape w-[510px] h-[470px] bg-no-repeat relative bg-bottom"
               imgSrc="/hero/sunyong.png"
             />
@@ -65,4 +65,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Introduction;

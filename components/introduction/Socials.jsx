@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import ICONS from "@/constants/icons";
+import ICONS from "@/constants/ICONS";
 
 const Socials = ({ containerStyles, iconStyles }) => {
   return (
@@ -18,7 +18,3 @@ const Socials = ({ containerStyles, iconStyles }) => {
 };
 
 export default Socials;
-
-// 고칠부분
-// 새로운 창으로 열리게 만들기.
-

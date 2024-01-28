@@ -2,7 +2,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { AlignJustify } from "lucide-react";
 import Logo from "./Logo";
 import Navigation from "./Navigation";
-import Socials from "/components/hero/Socials";
+import Socials from "/components/introduction/Socials";
 
 const MobileNavigation = () => {
   return (
