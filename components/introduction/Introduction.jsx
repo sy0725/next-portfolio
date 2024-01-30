@@ -50,9 +50,9 @@ const Introduction = () => {
             />
           </div>
           <div className="hidden xl:flex relative">
-            <div className="bg-hero_shape_light dark:bg-hero_shape_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+            <div className="w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <MyImg
-              containerStyles="bg-hero_shape w-[510px] h-[470px] bg-no-repeat relative bg-bottom"
+              containerStyles="bg-about_shape_light dark:bg-hero_shape_dark w-[510px] h-[470px] bg-no-repeat relative bg-bottom"
               imgSrc="/hero/sunyong.png"
             />
           </div>
