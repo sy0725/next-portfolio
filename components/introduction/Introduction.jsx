@@ -52,8 +52,8 @@ const Introduction = () => {
           <div className="hidden xl:flex relative">
             <div className="w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
             <MyImg
-              containerStyles="bg-about_shape_light dark:bg-hero_shape_dark w-[510px] h-[470px] bg-no-repeat relative bg-bottom"
-              imgSrc="/hero/sunyong.png"
+              containerStyles="w-[510px] h-[470px] relative bg-bottom"
+              imgSrc="/about/sunyong.png"
             />
           </div>
         </div>
