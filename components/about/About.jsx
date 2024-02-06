@@ -1,131 +1,15 @@
 import MyImg from "../introduction/MyImg";
 import Image from "next/image";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
 import {
-  User2,
-  MailIcon,
-  HomeIcon,
-  PhoneCall,
   GraduationCap,
-  Calendar,
   Briefcase,
-  Star,
 } from "lucide-react";
+import INFODATA from "@/constants/INFODATA";
+import CERTIFICATEDATA from "@/constants/CERTIFICATEDATA";
+import QUALIFICATIONDATA from "@/constants/QUALIFICATIONDATA";
+import SKILLDATA from "@/constants/SKILLDATA";
 
-const infoData = [
-  {
-    icon: <User2 size={20} />,
-    text: "SunYong Jeon",
-  },
-  {
-    icon: <PhoneCall size={20} />,
-    text: "010 - 5730 - 8888",
-  },
-  {
-    icon: <MailIcon size={20} />,
-    text: "tkdcsy@gmail.com",
-  },
-  {
-    icon: <Calendar size={20} />,
-    text: "95. 07. 25",
-  },
-  {
-    icon: <HomeIcon size={20} />,
-    text: "경기도 수원시 세류동",
-  },
-];
-
-const certificateData = [
-  {
-    icon: <Star size={20} />,
-    text: "워드프로세서",
-  },
-  {
-    icon: <Star size={20} />,
-    text: "컴퓨터활용능력 2급",
-  },
-  {
-    icon: <Star size={20} />,
-    text: "ITQ OA Maseter",
-  },
-  {
-    icon: <Star size={20} />,
-    text: "E-TEST Professionals",
-  },
-  {
-    icon: <Star size={20} />,
-    text: "CS Leaders",
-  },
-];
-
-const qualificationData = [
-  {
-    title: "education",
-    data: [
-      {
-        university: "용인대학교",
-        major: "동양무예학과",
-        years: "2014 - 2020",
-      },
-    ],
-  },
-  {
-    title: "experience",
-    data: [
-      {
-        name: "멋쟁이사자처럼 프론트엔드 스쿨",
-        companyName: "테킷",
-        date: "2023.05.24 - 2023.09.26",
-      },
-      {
-        name: "멋쟁이사자처럼 프론트엔드 스쿨 플러스",
-        companyName: "테킷",
-        date: "2023.10.23 - 2023.12.26",
-      },
-    ],
-  },
-];
-
-const skillData = [
-  {
-    title: "skills",
-    data: [
-      {
-        name: "HTML, CSS",
-      },
-      {
-        name: "TailwindCSS, Styled-Component",
-      },
-      {
-        name: "JavaScript, TypeScript",
-      },
-      {
-        name: "React, Zustand, React-Query",
-      },
-      {
-        name: "Next.js, SWR, Framer-Motion",
-      },
-      {
-        name: "SupaBase, PocketBase",
-      },
-    ],
-  },
-  {
-    title: "tools",
-    data: [
-      {
-        imgPath: "/about/vscode.svg",
-      },
-      {
-        imgPath: "/about/notion.svg",
-      },
-      {
-        imgPath: "/about/figma.svg",
-      },
-    ],
-  },
-];
 
 const About = () => {
   const getData = (arr, title) => {
@@ -149,7 +33,7 @@ const About = () => {
             <Tabs defaultValue="personal">
               <TabsList className="w-full grid xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none">
                 <TabsTrigger className="w-[162px] xl:w-auto" value="personal">
-                  Personal Info
+                  Info
                 </TabsTrigger>
                 <TabsTrigger
                   className="w-[162px] xl:w-auto"
@@ -165,7 +49,7 @@ const About = () => {
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
                     <div className="grid xl:grid-cols-2 gap-4 mb-12">
-                      {infoData.map((item, index) => {
+                      {INFODATA.map((item, index) => {
                         return (
                           <div
                             className="flex items-center gap-x-4 mx-auto xl:mx-0"
@@ -181,7 +65,7 @@ const About = () => {
                       <div className="text-primary">Certificate</div>
                       <div className="border-b border-border"></div>
                       <div className="grid xl:grid-cols-2 gap-4 mb-12 mt-12 xl:mt-8">
-                        {certificateData.map((item, index) => {
+                        {CERTIFICATEDATA.map((item, index) => {
                           return (
                             <div
                               className="flex items-center gap-x-4 mx-auto xl:mx-0"
@@ -198,19 +82,16 @@ const About = () => {
                 </TabsContent>
                 <TabsContent value="Qualifications">
                   <div>
-                    <h3 className="h3 mb-8 text-center xl:text-left">
-                      My Awesome Journey
-                    </h3>
                     <div className="grid md:grid-cols-2 gap-y-8">
                       <div className="flex flex-col gap-y-6">
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <Briefcase />
                           <h4 className="capitalize font-medium">
-                            {getData(qualificationData, "experience").title}
+                            {getData(QUALIFICATIONDATA, "experience").title}
                           </h4>
                         </div>
                         <div className="flex flex-col gap-y-8 ">
-                          {getData(qualificationData, "experience").data.map(
+                          {getData(QUALIFICATIONDATA, "experience").data.map(
                             (item, index) => {
                               const { name, companyName, date } = item;
                               return (
@@ -222,7 +103,7 @@ const About = () => {
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                   </div>
                                   <div>
-                                    <div className="font-semibold text-xl leading-none mb-2">
+                                    <div className="font-semibold text-lg leading-none mb-2">
                                       {name}
                                     </div>
                                     <div className="text-lg leading-none text-muted-foreground mb-4">
@@ -242,11 +123,11 @@ const About = () => {
                         <div className="flex gap-x-4 items-center text-[22px] text-primary">
                           <GraduationCap size={28} />
                           <h4 className="capitalize font-medium">
-                            {getData(qualificationData, "education").title}
+                            {getData(QUALIFICATIONDATA, "education").title}
                           </h4>
                         </div>
                         <div className="flex flex-col gap-y-8 ">
-                          {getData(qualificationData, "education").data.map(
+                          {getData(QUALIFICATIONDATA, "education").data.map(
                             (item, index) => {
                               const { university, major, years } = item;
                               return (
@@ -258,7 +139,7 @@ const About = () => {
                                     <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] transition-all duration-500"></div>
                                   </div>
                                   <div>
-                                    <div className="font-semibold text-xl leading-none mb-2">
+                                    <div className="font-semibold text-lg leading-none mb-2">
                                       {university}
                                     </div>
                                     <div className="text-lg leading-none text-muted-foreground mb-4">
@@ -279,17 +160,16 @@ const About = () => {
                 </TabsContent>
                 <TabsContent value="Skills">
                   <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-8">Tools I Use Everyday</h3>
                     <div className="mb-16">
                       <h4 className="text-x font-semibold mb-2">Skills</h4>
                       <div className="border-b border-border mb-4"></div>
-                      <div>
-                        {getData(skillData, "skills").data.map(
+                      <div className="flex flex-col gap-5">
+                        {getData(SKILLDATA, "skills").data.map(
                           (item, index) => {
                             const { name } = item;
                             return (
                               <div
-                                className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                                className="w-[100%] text-center xl:text-left mx-auto xl:mx-0"
                                 key={index}
                               >
                                 <div className="font-medium">{name}</div>
@@ -305,7 +185,7 @@ const About = () => {
                       </h4>
                       <div className="border-b border-border mb-4"></div>
                       <div className="flex gap-x-8 justify-center xl:justify-start">
-                        {getData(skillData, "tools").data.map((item, index) => {
+                        {getData(SKILLDATA, "tools").data.map((item, index) => {
                           const { imgPath } = item;
                           return (
                             <div key={index}>
