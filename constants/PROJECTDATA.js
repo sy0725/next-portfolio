@@ -26,7 +26,7 @@ const PROJECTDATA = [
   {
     image: "/work/wont.png",
     category: "React JS",
-    name: "WonT",
+    name: "WonT ver.1",
     description: "여행 일정을 위한 여행 플랫폼",
     link: "https://weontrip.vercel.app/",
     github: "https://github.com/FRONTENDSCHOOL6/WonT",

@@ -5,11 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import ProjectCard from "@/components/Work/ProjectCard";
+import ProjectCard from "@/components/Project/ProjectCard";
 import PROJECTDATA from "@/constants/PROJECTDATA";
 
-
-const Work = () => {
+const Project = () => {
   return (
     <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
@@ -32,7 +31,7 @@ const Work = () => {
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
-            {PROJECTDATA.slice(0, 4).map((project, index) => {
+            {PROJECTDATA.slice(0, 5).map((project, index) => {
               return (
                 <SwiperSlide key={index}>
                   <ProjectCard project={project} />
@@ -46,4 +45,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Project;

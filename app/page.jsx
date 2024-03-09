@@ -1,14 +1,14 @@
 import Introduction from "@/components/introduction/Introduction";
 import About from "@/components/about/About";
 import Study from "@/components/study/Study";
-import Work from "@/components/Work/Work";
+import Project from "@/components/Project/Project";
 export default function Home() {
   return (
     <main>
       <Introduction />
       <About />
       <Study />
-      <Work />
+      <Project />
     </main>
   );
 }
