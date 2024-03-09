@@ -1,11 +1,19 @@
 const PROJECTDATA = [
   {
     image: "/work/portfolio.png",
+    category: "Next TS",
+    name: "WonT ver.2",
+    description: "여행 일정을 위한 여행 플랫폼",
+    link: "/",
+    github: "https://github.com/Next-WonT/WonT",
+  },
+  {
+    image: "/work/portfolio.png",
     category: "Next JS",
     name: "Next Portfolio",
     description: "Next Portfolio",
     link: "/",
-    github: "/",
+    github: "https://github.com/sy0725/next-portfolio",
   },
   {
     image: "/work/jungle.png",
@@ -20,7 +28,6 @@ const PROJECTDATA = [
     category: "React JS",
     name: "WonT",
     description: "여행 일정을 위한 여행 플랫폼",
-    vision: "Next.JS , TypeScript 마이그레이션 진행 중 🧰",
     link: "https://weontrip.vercel.app/",
     github: "https://github.com/FRONTENDSCHOOL6/WonT",
   },
